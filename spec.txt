@@ -1,1 +1,7 @@
-
+fonction a faire:(ranger par paragraphe dans le chapitre 3)
+-creation de personnage
+-pouvoir spéciaux
+-creation de créature
+-attaquer la créature
+-level up
+-fin de combat(appel automatique a la mort du joueur)
