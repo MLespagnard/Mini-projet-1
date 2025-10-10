@@ -1,7 +1,7 @@
 fonction a faire:(ranger par paragraphe dans le chapitre 3)
 -creation de personnage (nom, types, gerer l'equipe et leurs 50 gold, choisir vie entre caracteristiques )
--pouvoir spéciaux 
--creation de créature 
--attaquer la créature 
+-pouvoir spéciaux (recuperer type personnage, pv specifique ou pas,renvoyer erreur si pas le bon type, )
+-creation de créature ()
+-attaquer la créature (meme chose pour les personnage, )
 -level up 
 -fin de combat(appel automatique a la mort du joueur)
