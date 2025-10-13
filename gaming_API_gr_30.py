@@ -57,10 +57,3 @@ def lvl_up(character):
                 return
         else:
             print("You didn't win a life bonus")
-
-reset_game()
-add_new_character("max", "dwarf", "short", 20, 20)
-set_character_strength("max", 20)
-set_character_strength("max", 10)
-set_team_money(50)
-lvl_up("max")
