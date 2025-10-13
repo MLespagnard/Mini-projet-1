@@ -115,7 +115,7 @@ def attack(character:str, creature:str):
             set_character_life(character, -1)
             print("%s is dead" %character)
 
-def createcreature():
+def create_new_creature():
     """Adds a creature
     Creature name is randomized
     Creature reach is chosen between short or long
@@ -131,6 +131,7 @@ def createcreature():
         return(cname,creach,cstrength,clife)
     else:
         print("A creature already exists")
+
 
 
 
