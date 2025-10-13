@@ -3,15 +3,6 @@ import random
 
 def lvl_up(character):
 
-    
-    if(not character_exists(character)):
-        print('there is no charachter names %s' %(character))
-        return
-    
-    if(get_character_life(character) <= 0):
-        print("the character %s is dead" %character)
-        return
-
     money = get_team_money()
 
     if money < 4:
@@ -24,9 +15,9 @@ def lvl_up(character):
             set_character_strength(character, strength + 4)
             print(f"You win a strength bonus of 4, you now have {strength + 4}")
         else:
-            Print("You didn't win")
-        
-        if (random.randint(1,2) == 1):
+            print("You didn't win a strength bonus")
+                
+        if (random.randint(1,2) == 1): 
             life = get_character_life(character)
             set_character_life(character, life + 2)
             print(f"You win a life bonus of 2, you now have {life + 2}")
