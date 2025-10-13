@@ -47,14 +47,14 @@ def new_character(character:str, variety:str):
 
 
 def attack(character:str, creature:str):
-    """manage the combat part
+    """Manage the combat part
 
-        parameter
+        Parameters
         ------------------
         character: the character that attack (str)
         creature: the creature that is attack (str)
 
-        note
+        Note
         -----------------
         the creature and the character must exist
         and the character must be not dead
@@ -122,15 +122,16 @@ def create_new_creature():
     Creature strength is set between 1 and 10 * 1+number of defeated creatures
     Creature life is set between 1 and 10 * 1+number of defeated creatures"""
     if not is_there_a_creature():
-        cname=get_random_creature_name()
-        creach=random.choice(["short","long"])
-        cstrength=random.randint(1,10)*(1+get_nb_defeated())
-        clife=random.randint(1,10)*(1+get_nb_defeated())
-        add_creature(cname,creach,cstrength,clife)
-        print("A creature has been added (Name:%s Reach:%s Strength:%d Life:%d)"%(cname,creach,cstrength,clife))
-        return(cname,creach,cstrength,clife)
+        creature_name=get_random_creature_name()
+        creature_reach=random.choice(["short","long"])
+        creature_strength=random.randint(1,10)*(1+get_nb_defeated())
+        creature_life=random.randint(1,10)*(1+get_nb_defeated())
+        add_creature(creature_name,creature_reach,creature_strength,creature_life)
+        print("A creature has been added (Name:%s Reach:%s Strength:%d Life:%d)"%(creature_name,creature_reach,creature_strength,creature_life))
+        return(creature_name,creature_reach,creature_strength,creature_life)
     else:
         print("A creature already exists")
+
 
 
 
