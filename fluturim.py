@@ -1,7 +1,7 @@
 from gaming_tools import * 
 import random
 
-reset_game()
+
 
 def new_character(character, variety):
     """Create a new player to the game and set team money to 50 for the team
