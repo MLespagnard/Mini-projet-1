@@ -23,7 +23,7 @@ def attaque(character:str, creature:str):
         print('there is no charachter names %s' %(character))
         return
     
-    if(creature_exists(creature)):
+    if(not creature_exists(creature)):
         print('there is not creature names %s' %creature)
         return
 
