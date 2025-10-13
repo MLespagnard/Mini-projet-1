@@ -1,8 +1,6 @@
 from gaming_tools import * 
-import random
 
-
-
+reset_game()
 def new_character(character, variety):
     """Create a new player to the game and set team money to 50 for the team
     
@@ -33,6 +31,6 @@ def new_character(character, variety):
         reach = 'long'
 
     add_new_character(character,variety,reach,strength,life)
-    print('The new character have been aded')
+    print('The new character have been aded and your name is: ', character, '\n Your variety is: ', variety, '\n Your reach is', reach, '\n Your strengh is:', strength, '\n Your life is:', life )
 
 new_character('Test1','elf')
