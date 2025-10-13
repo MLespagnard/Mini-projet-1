@@ -1,4 +1,5 @@
 from gaming_tools import *
+import random
 
 def new_game():
     """Reset all the game and set money to 50 for the team
@@ -134,7 +135,55 @@ def create_new_creature():
         print("A creature already exists")
 
 
+def lvl_up(character):
+    """Handles the evolution of a given character. (Strength and life bonuses)
 
+    Args:
+        character (str): nom du personnage ciblé.
+
+    Raises:
+        Aucun Raise, la fonction gère elle-même les erreurs qui peuvent avoir lieu.
+    """
+
+ # Vérifie que le personnage existe avant de dépenser l'or
+    try:
+
+        character_strength = get_character_strength(character)
+        character_life = get_character_life(character)
+    except ValueError as e:
+        print(e)
+        return
+
+
+    money = get_team_money()
+
+# Vérifie si l'équipe est soldable
+    if money < 4:
+        print("You have not enough money")
+    else:
+        set_team_money(money - 4)
+
+    # 25%: bonus de force
+        if (random.randint(1,4) == 1):
+            try:
+                set_character_strength(character, character_strength + 4)
+                print(f"You win a strength bonus of 4, you now have {character_strength + 4}")
+            except ValueError as e:
+                print(e)
+                return
+        else:
+            print("You didn't win a strength bonus")
+            
+    # 50%: bonus de vie
+        if (random.randint(1,2) == 1): 
+            try:
+                set_character_life(character, character_life + 2)
+                print(f"You win a life bonus of 2, you now have {character_life + 2}")
+            except ValueError as e:
+                print(e)
+                return
+        else:
+            print("You didn't win a life bonus")
 
 
 
