@@ -1,5 +1,5 @@
 from gaming_tools import *
-def addc():
+def createcreature():
     """Adds a creature
     Creature name is randomized
     Creature reach is chosen between short or long
@@ -17,5 +17,5 @@ def addc():
         print("A creature already exists")
 
 
-addc()
+createcreature()
 reset_game()
