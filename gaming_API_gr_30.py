@@ -3,6 +3,15 @@ import random
 
 def lvl_up(character):
 
+    
+    if(not character_exists(character)):
+        print('there is no charachter names %s' %(character))
+        return
+    
+    if(get_character_life(character) <= 0):
+        print("the character %s is dead" %character)
+        return
+
     money = get_team_money()
 
     if money < 4:
