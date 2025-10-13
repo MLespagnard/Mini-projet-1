@@ -6,7 +6,7 @@ def attack(character:str, creature:str):
         parameter
         ------------------
         character: the character that attack (str)
-        creature: the crature that is attack (str)
+        creature: the creature that is attack (str)
 
         note
         -----------------
@@ -68,3 +68,4 @@ def attack(character:str, creature:str):
         else:
             set_character_life(character, -1)
             print("%s is dead" %character)
+
