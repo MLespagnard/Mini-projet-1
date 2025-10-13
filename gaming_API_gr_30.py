@@ -93,9 +93,9 @@ def attack(character:str, creature:str):
 
         else:
             remove_creature(creature)
-            set_nb_defeated(get_nb_defeated+1)
-            money_win = 40 +(10 * get_nb_defeated)
-            set_team_money(get_team_money + money_win)
+            set_nb_defeated(get_nb_defeated()+1)
+            money_win = 40 +(10 * get_nb_defeated())
+            set_team_money(get_team_money() + money_win)
             print('the team defeated %s and win %d money' %(creature, money_win))
             return
 
@@ -132,6 +132,7 @@ def create_new_creature():
         return(creature_name,creature_reach,creature_strength,creature_life)
     else:
         print("A creature already exists")
+
 
 
 
