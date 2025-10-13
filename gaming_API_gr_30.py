@@ -115,11 +115,13 @@ def attack(character:str, creature:str):
             print("%s is dead" %character)
 
 def create_new_creature():
-    """Adds a creature
-    Creature name is randomized
-    Creature reach is chosen between short or long
-    Creature strength is set between 1 and 10 * 1+number of defeated creatures
-    Creature life is set between 1 and 10 * 1+number of defeated creatures"""
+    """Adds a creature. 
+    Creature name is randomized.
+    Creature reach is chosen between short or long.
+    Creature strength is set between 1 and 10 * 1+number of defeated creatures.
+    Creature life is set between 1 and 10 * 1+number of defeated creatures.
+    """
+  
     if not is_there_a_creature():
         creature_name=get_random_creature_name()
         creature_reach=random.choice(["short","long"])
@@ -130,6 +132,7 @@ def create_new_creature():
         return(creature_name,creature_reach,creature_strength,creature_life)
     else:
         print("A creature already exists")
+
 
 
 
