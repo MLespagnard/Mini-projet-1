@@ -43,7 +43,7 @@ def new_character(character:str, variety:str):
         reach = 'long'
 
     add_new_character(character,variety,reach,strength,life)
-    print('The new character have been aded and your name is: ', character, '\n Your variety is: ', variety, '\n Your reach is', reach, '\n Your strengh is:', strength, '\n Your life is:', life )
+    print('The new character have been added and your name is: ', character, '\n Your variety is: ', variety, '\n Your reach is', reach, '\n Your strength is:', strength, '\n Your life is:', life )
 
 
 def attack(character:str, creature:str):
@@ -131,5 +131,6 @@ def createcreature():
         return(cname,creach,cstrength,clife)
     else:
         print("A creature already exists")
+
 
 
