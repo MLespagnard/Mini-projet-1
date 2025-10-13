@@ -108,7 +108,7 @@ def attack(character:str, creature:str):
 
         if(life_of_character > strength_of_creature):
             set_character_life(character, life_of_character - strength_of_creature)
-            print('%s attack and %s losse %d hp' %(creature, character, strength_of_character) )
+            print('%s attack and %s losse %d hp' %(creature, character, strength_of_creature) )
 
         else:
             set_character_life(character, -1)
