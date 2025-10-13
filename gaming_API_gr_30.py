@@ -22,7 +22,6 @@ def new_character(character:str, variety:str):
     
     """
 
-    set_team_money(50)
     if character_exists(character) == True:
         print("This character already exist, please try another one")
     
@@ -131,6 +130,7 @@ def create_new_creature():
         return(creature_name,creature_reach,creature_strength,creature_life)
     else:
         print("A creature already exists")
+
 
 
 
