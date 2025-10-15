@@ -19,11 +19,4 @@ Le but est de créer un petit jeu textuel basé sur des personnages, des créatu
 ## Exemple d’utilisation
 
 ```python
-from main import *
-
-new_game()
-new_character("Aragorn", "elf")
-create_new_creature()
-attack("Aragorn", "creature_1")
-use_special_power("Aragorn", "creature_1")
-lvl_up("Aragorn")
+A écrire
