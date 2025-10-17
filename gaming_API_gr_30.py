@@ -183,25 +183,25 @@ def use_special_power(character,target):
     else:
         print('The character does not exist.')
 
-def necromancer_power(target):
+def necromancer_power(character):
     """Let the necromancer revive the target with 10 points of live for 75 pieces of gold.
 
     Parameter
     ________
-    target : the name of the character we want to revive (str)
+    character : the name of the character we want to revive (str)
     
     """
     
     # Checks if the target exist
-    if character_exists(target):
+    if character_exists(character):
         
         # Checks if the team has enough money (75 gold)
         if get_team_money()>=75:
             
             # Checks if the target is dead
-            if character_alive(target)==False :
+            if character_alive(character)==False :
             
-                set_character_life(target,10)
+                set_character_life(character,10)
             
                 # it cost 75 pieces of gold to use the power
                 set_team_money(get_team_money()-75)
@@ -215,7 +215,7 @@ def necromancer_power(target):
     else:
         print('The character does not exist.')
 
-def wizard_power(target):
+def wizard_power(creature):
     """Let the wizard reduce the live of the creature  by half for 20 pieces of gold
      
      Parameter
@@ -224,12 +224,12 @@ def wizard_power(target):
      """
      
      #check if the creature exists
-    if creature_exists(target):
+    if creature_exists(creature):
         
         # check if the team has enough money.(20 gold)
         if get_team_money()>=20:
 
-            set_creature_life(target,get_creature_life(target)//2)
+            set_creature_life(creature,get_creature_life(creature)//2)
             #it cost 20 pieces of gold
             set_team_money(get_team_money()-20)
         else:
@@ -239,7 +239,7 @@ def wizard_power(target):
 
         print('The creature does not exist.')  
 
-def healer_power(target):
+def healer_power(character):
     """Lets the healer heal a character in the team for 10 pieces of gold
     
     Parameter
@@ -247,18 +247,19 @@ def healer_power(target):
     target : the name of the character we heal
     """  
     # Checks if the target exists 
-    if character_exists(target):
+    if character_exists(character):
 
         #check if the team has enough money (5 gold)
         if get_team_money()>=5:
 
             #Check if the target is alive
-            if character_alive(target):
+            if character_alive(character):
 
-                set_character_life(target,get_character_life(target)+10)
+                set_character_life(character,get_character_life(character)+10)
                 #it costs 5 pieces of gold
 
                 set_team_money(get_team_money()-5)
+                print("The life of this character is now: ", get_character_life(target))
             
             else:
 
@@ -271,7 +272,7 @@ def healer_power(target):
     else: 
         print('The character does not exist.')
 
-def lvl_up(character):
+def lvl_up(character:str):
     """Handles the evolution of a given character. (Strength and life bonuses)
 
     Args:
@@ -320,9 +321,6 @@ def lvl_up(character):
                 return
         else:
             print("You didn't win a life bonus")
-
-
-
 
 
 
