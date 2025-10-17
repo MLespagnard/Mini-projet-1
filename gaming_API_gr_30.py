@@ -261,7 +261,7 @@ def healer_power(character):
                 #it costs 5 pieces of gold
 
                 set_team_money(get_team_money()-5)
-                print("The life of this character is now: %d \nYour team money is %d", %(get_character_life(character), get_team_money()))
+                print("The life of this character is now: %d \nYour team money is %d" %(get_character_life(character), get_team_money()))
             
             else:
 
