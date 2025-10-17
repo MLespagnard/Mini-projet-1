@@ -133,7 +133,7 @@ def attack(character:str, creature:str):
             return
 
     if(character_reach == 'long' and creature_reach == 'short'):
-        print('%s can\'t reach %S' %(creature, character))
+        print('%s can\'t reach %s' %(creature, character))
 
     else:
         life_of_character = get_character_strength(character)
