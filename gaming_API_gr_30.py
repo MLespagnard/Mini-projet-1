@@ -205,6 +205,7 @@ def necromancer_power(character):
             
                 # it cost 75 pieces of gold to use the power
                 set_team_money(get_team_money()-75)
+                print('%s is now alive for 75 coin \nYour team money is %d' %(character, get_team_money()))
             else:
             
                 print('The character is not dead. No need to revive.')
@@ -232,6 +233,7 @@ def wizard_power(creature):
             set_creature_life(creature,get_creature_life(creature)//2)
             #it cost 20 pieces of gold
             set_team_money(get_team_money()-20)
+            print('The life of the creature %s has been halfed. \n Now his life is at %d\n For 20 coin, you hav now %d' %(creature, get_creature_life(creature), get_team_money()))
         else:
 
             print('Not enough money.')
@@ -259,7 +261,7 @@ def healer_power(character):
                 #it costs 5 pieces of gold
 
                 set_team_money(get_team_money()-5)
-                print("The life of this character is now: ", get_character_life(character))
+                print("The life of this character is now: %d \nYour team money is %d", %(get_character_life(character), get_team_money()))
             
             else:
 
