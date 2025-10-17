@@ -145,7 +145,7 @@ def attack(character:str, creature:str):
             print('%s attack and %s losse %d hp' %(creature, character, strength_of_creature) )
 
         else:
-            set_character_life(character, -1)
+            set_character_life(character, 0)
             print("%s is dead" %character)
             
 def use_special_power(character,target):
