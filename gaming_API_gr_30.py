@@ -59,7 +59,6 @@ def create_new_creature():
         creature_life=random.randint(1,10)*(1+get_nb_defeated())
         add_creature(creature_name,creature_reach,creature_strength,creature_life)
         print("A creature has been added (Name:%s Reach:%s Strength:%d Life:%d)"%(creature_name,creature_reach,creature_strength,creature_life))
-        return(creature_name,creature_reach,creature_strength,creature_life)
     else:
         print("A creature already exists")
 
