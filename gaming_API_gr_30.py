@@ -22,6 +22,7 @@ def new_character(character:str, variety:str):
 
     if character_exists(character) == True:
         print("This character already exist, please try another one")
+        return
     
     
     if variety  == 'dwarf':
@@ -110,6 +111,7 @@ def attack(character:str, creature:str):
         print('there is not creature names %s' %creature)
         return
 
+    #character attack creature
     creature_reach = get_creature_reach(creature)
     character_reach = get_character_reach(character)
         
@@ -131,12 +133,12 @@ def attack(character:str, creature:str):
             set_team_money(get_team_money() + money_win)
             print('the team defeated %s and win %d money' %(creature, money_win))
             return
-
+    #creature attack character
     if(character_reach == 'long' and creature_reach == 'short'):
         print('%s can\'t reach %s' %(creature, character))
 
     else:
-        life_of_character = get_character_strength(character)
+        life_of_character = get_character_life(character)
         strength_of_creature = get_creature_strength(creature)
 
         if(life_of_character > strength_of_creature):
@@ -242,7 +244,7 @@ def wizard_power(creature):
         print('The creature does not exist.')  
 
 def healer_power(character):
-    """Lets the healer heal a character in the team for 10 pieces of gold
+    """Lets the healer heal a character in the team for 5 pieces of gold
     
     Parameter
     __________
